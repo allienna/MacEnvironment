@@ -1,0 +1,5 @@
+[user]
+	name = Aurélien Allienne
+	email = aurelien.allienne@gmail.com
+[include]
+	path = .gitglobalconfig

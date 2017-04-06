@@ -1,0 +1,7 @@
+[alias]
+	fp = fetch -p
+	st = status
+	co = checkout
+	undo = reset --hard
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	
