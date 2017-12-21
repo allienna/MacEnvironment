@@ -1,7 +1,29 @@
+[http]
+	proxy = http://gateway.zscaler.net:80
+[https]
+	proxy = https://gateway.zscaler.net:8080
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = subl -n -w
+[push]
+	default = current
 [alias]
-	fp = fetch -p
 	st = status
 	co = checkout
-	undo = reset --hard
+	undo=reset --hard
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	
+[pull]
+	rebase = true
+[merge]
+    tool = intellij
+[mergetool "intellij"]
+    cmd = idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
+[diff]
+    tool = intellij
+[difftool "intellij"]
+    cmd = idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+[mergetool]
+	keepBackup = false
+[difftool]
+	prompt = false
