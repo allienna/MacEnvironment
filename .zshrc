@@ -1,12 +1,16 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOPATH/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=/Users/Aurelien/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -51,7 +55,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages docker docker-compose git gnu-utils history man mvn node npm nvm osx yarn)
+plugins=(brew colored-man-pages docker docker-compose git gnu-utils history jenv man mvn node npm nvm osx sublime yarn)
 
 source $ZSH/oh-my-zsh.sh
 
