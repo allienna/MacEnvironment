@@ -87,3 +87,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias docker-clean-unused='docker system prune --all --force --volumes'
+alias docker-clean-all='docker container stop $(docker container ls -a -q) && docker system prune -a -f --volumes'
