@@ -4,28 +4,24 @@
 [push]
 	default = current
 [alias]
-	undo=reset --hard
-    f = fetch
-    fp = fetch -p --progress
-    st = status --short --branch
-    s = status --short --branch
-    ci = commit
-    br = branch
-    co = checkout
-    cb = checkout -b
-    df = diff
-    ds = diff --staged
-    lg = log -p
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
-    # Show files ignored by git:
-    ign = ls-files -o -i --exclude-standard
-    dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
-    purge = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git br |ipt -m | xargs git br -D; }; f"
-	
+	cam = commit -a -m
+	undo = reset --hard
+	f = fetch
+	fp = fetch -p --progress
+	st = status --short --branch
+	s = status --short --branch
+	ci = commit
+	br = branch
+	co = checkout
+	cb = checkout -b
+	df = diff
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	acpf=!git add . && git commit --amend --no-edit && git push origin $branch --force-with-lease
+
 [pull]
 	rebase = true
 [merge]

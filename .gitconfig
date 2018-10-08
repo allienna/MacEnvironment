@@ -1,6 +1,8 @@
 [user]
     name = Aurélien Allienne
-    email = aurelien.allienne@gmail.com
+    email = aurelien.allienne@norauto.com
 
 [include]
 	path = .gitglobalconfig
+[alias]
+	roll = log
